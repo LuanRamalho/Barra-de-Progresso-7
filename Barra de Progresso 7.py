@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter.ttk import *
 import time
+import tkinter as tk
 
 def start():
     GB = 5000
@@ -36,21 +37,8 @@ percentLabel.pack()
 taskLabel = Label(window, textvariable=text, font=('Arial', 10), foreground="#FFFFFF", background="#1e1e1e")
 taskLabel.pack(pady=10)
 
-# Definindo o estilo para o botão
-style = Style()
-style.configure("TButton",
-                background="#FFFACD",  
-                foreground="#808000", 
-                font=("Arial", 12, "bold"),
-                relief=RAISED,
-                padding=10)
-
-# Ajustando o fundo para o botão preencher completamente
-style.map("TButton",
-          background=[('active', '#006400'), ('!active', '#8B0000')])  # Cor ativa e inativa do botão
-
 # Botão com estilo
-button = Button(window, text="Start Download", command=start, style="TButton")
+button = tk.Button(window, text="Start Download", command=start, font=('Arial', 15, 'bold'), foreground="darkolivegreen", background="aqua")
 button.pack(pady=20)
 
 window.mainloop()
